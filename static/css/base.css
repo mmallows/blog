@@ -21,6 +21,11 @@ header h1 a {
 .nav-right {
     display: flex;
     padding-top: 2rem;
+    float: inline-end;
+}
+
+a img {
+    height: 25px;
 }
 
 .post-entry {

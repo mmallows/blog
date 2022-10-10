@@ -3,7 +3,7 @@
 <html>
 
 <head>
-    <title>Personal Blog</title>
+    <title>Marcus Personal Blog</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
@@ -11,7 +11,23 @@
 <body>
     <header>
         <h1><a href="{% url 'home' %}">Marcus M.</a></h1>
+        <nav class="nav-right">
+            <a href="https://www.linkedin.com/in/mmallows/">
+                <img src="https://th.bing.com/th/id/OIP.HOm42Da9uId9s5XhY63gHwHaHY?w=178&h=180&c=7&r=0&o=5&pid=1.7"
+                    alt="LinkedIn">
+            </a>
+        </nav>
     </header>
+    <h2>Welcome & About Me</h2>
+    <p>
+        Welcome and thank you for viewing my website. This site is a compilation of projects that I've worked on in &
+        outside the
+        classroom. I'm proudly part of the class of 2023 at Saint Michael's College. I've had a great and successful
+        educational
+        experience that has made me increasingly curious and excited to learn and apply that knowledge. Feel free to
+        check out
+        my work and contact me with any questions. You can also find me and many of these projects on GitHub. Thank you!
+    </p>
     <div>
         {% block content %}
         {% endblock content %}
