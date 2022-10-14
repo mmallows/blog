@@ -7,6 +7,8 @@ header {
     border-bottom: 1px solid #999;
     margin-bottom: 2rem;
     display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 header h1 a {
@@ -20,16 +22,25 @@ header h1 a {
 
 .nav-right {
     display: flex;
+    flex-direction: row;
     padding-top: 2rem;
-    float: inline-end;
+    justify-content: flex-end;
+    width: 80%;
 }
 
-a img {
+header nav a {
+    align-self: right;
+    margin-right: 5%;
+}
+
+header nav a img {
     height: 25px;
 }
 
 .post-entry {
     margin-bottom: 2rem;
+    padding: 10px 20px 20px 20px;
+    border: 2px solid black;
 }
 
 .post-entry h2 {
@@ -49,4 +60,12 @@ a img {
 
 .post-entry h2 a:hover {
     color: red;
+}
+
+p.welcome {
+    margin: 1em 2em 1em 2em;
+}
+
+h2.welcome {
+    text-align: center;
 }

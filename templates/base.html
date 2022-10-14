@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-<html>
+<html lang="en">
 
 <head>
     <title>Marcus Personal Blog</title>
@@ -14,21 +14,33 @@
         <nav class="nav-right">
             <a href="https://www.linkedin.com/in/mmallows/">
                 <img src="https://th.bing.com/th/id/OIP.HOm42Da9uId9s5XhY63gHwHaHY?w=178&h=180&c=7&r=0&o=5&pid=1.7"
-                    alt="LinkedIn">
+                    alt="LinkedIn Logo">
+            </a>
+            <a href="https://github.com/mmallows">
+                <img src="https://th.bing.com/th/id/OIP.EgSPriuEnAtlIWJV8R_E1QHaGs?w=196&h=180&c=7&r=0&o=5&pid=1.7"
+                    alt="GitHub Logo">
             </a>
         </nav>
     </header>
-    <h2>Welcome & About Me</h2>
-    <p>
+    <h2 class="welcome">Welcome & About Me</h2>
+    <p class="welcome">
         Welcome and thank you for viewing my website. This site is a compilation of projects that I've worked on in &
-        outside the
-        classroom. I'm proudly part of the class of 2023 at Saint Michael's College. I've had a great and successful
-        educational
-        experience that has made me increasingly curious and excited to learn and apply that knowledge. Feel free to
-        check out
-        my work and contact me with any questions. You can also find me and many of these projects on GitHub. Thank you!
+        outside the classroom. I'm proudly part of the class of 2023 at Saint Michael's College. I've had a great and
+        successful
+        educational experience that has made me increasingly curious and excited to learn and apply that knowledge. Feel
+        free to check out my work and contact me with any questions. You can also find me and many of these projects on
+        GitHub. Thank you!
     </p>
     <div>
+        {% if user.is_authenticated %}
+        <p>Hello, {user.username}</p>
+        <p id="logout"><a href="{% url 'logout' %}">Log Out</a></p>
+        {% else %}
+        <p>You are not logged in.</p>
+        <a href="{% url 'login' %}">Log In</a>
+        <a href="{% url 'signup' %}">Sign Up</a>
+        <br><br>
+        {% endif %}
         {% block content %}
         {% endblock content %}
     </div>
