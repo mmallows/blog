@@ -20,7 +20,7 @@ class Comment(models.Model):
     comment = models.CharField(max_length=140)
     author = models.ForeignKey(
         "auth.User",  #copied from Post, not sure if correct (pg. 264)
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
     )
 
     def __str(self):
